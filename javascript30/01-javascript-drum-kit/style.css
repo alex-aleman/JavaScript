@@ -41,11 +41,13 @@ html, body {
 	border-width: 5px;
 	border-color: black;
 	border-radius: 5%;
+	transition-duration: 0.07s;
 }
 
 .playing {
 	width: 90px;
 	height: 100px;
+	box-shadow: 0 0 10px #ffc600;
 }
 
 kbd {
