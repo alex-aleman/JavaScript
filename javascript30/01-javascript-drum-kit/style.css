@@ -23,6 +23,7 @@ html, body {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	align-items: center;
 	width: 60vw;
 	height: 10vh;
 }
@@ -33,13 +34,18 @@ html, body {
 	justify-content: space-around;
 	align-items: center;
 	box-sizing: border-box;
-	height: 10vh;
-	width: 90px;
+	width: 81px;
+	height: 90px;
 	background-color: rgba(0, 0, 0, 0.75);
 	border-style: solid;
 	border-width: 5px;
 	border-color: black;
 	border-radius: 5%;
+}
+
+.playing {
+	width: 90px;
+	height: 100px;
 }
 
 kbd {
