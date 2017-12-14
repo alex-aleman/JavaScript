@@ -12,6 +12,8 @@ window.addEventListener('keydown', e => {
 const keys = document.querySelectorAll('.key');
 keys.forEach(key => {
 	key.addEventListener('transitionend', e => {
-		console.log(e);
+		if (e.propertyName === 'width') {
+			key.classList.remove('playing');
+		}
 	});
 });
