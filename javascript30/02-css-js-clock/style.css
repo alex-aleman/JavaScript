@@ -9,7 +9,20 @@ html, body {
 }
 
 body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background-color: blue;
+}
+
+#clock {
+	width: 300px;
+	height: 300px;
+	border-style: solid;
+	border-width: 10px;
+	border-color: white;
+	border-radius: 100%;
+	position: absolute;
 }
 
 .hand {
@@ -19,4 +32,5 @@ body {
 	position: absolute;
 	top: 50%;
 	transform-origin: 100%;
+	transform: rotate(90deg);
 }
