@@ -46,3 +46,12 @@ html, body {
 #panel5 {
 	background-image: url('back5.jpg');
 }
+
+.panel > * {
+	flex-grow: 1;
+	flex-shrink: 0;
+	flex-basis: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
