@@ -1,0 +1,48 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+#panels {
+	display: flex;
+	flex-direction: row;
+	min-height: 100vh;
+}
+
+.panel {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Amatic SC';
+	font-size: 30pt;
+	color: white;
+	background-position: center;
+	text-shadow: 5px 5px 5px black;
+}
+
+#panel1 {
+	background-image: url('back1.jpg');
+}
+
+#panel2 {
+	background-image: url('back2.jpg');
+}
+
+#panel3 {
+	background-image: url('back3.jpg');
+}
+
+#panel4 {
+	background-image: url('back4.jpg');
+}
+
+#panel5 {
+	background-image: url('back5.jpg');
+}
