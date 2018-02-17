@@ -1,0 +1,19 @@
+{
+  "name": "descartes",
+  "version": "1.0.0",
+  "description": "productivity app",
+  "main": "app.js",
+  "scripts": {
+    "test": "xo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alex-aleman/JavaScript.git#Descartes"
+  },
+  "author": "alex-aleman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alex-aleman/JavaScript/issues"
+  },
+  "homepage": "https://github.com/alex-aleman/JavaScript/tree/Descartes#readme"
+}

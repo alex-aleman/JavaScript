@@ -1,0 +1,2 @@
+https://nodejs.org/api/synopsis.html#synopsis_example
+https://stackoverflow.com/a/4720770
