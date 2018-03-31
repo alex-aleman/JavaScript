@@ -2,8 +2,24 @@
 <html>
 <head>
 	<title>JavaScript Loan Calculator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-
+	<table>
+		<tr>
+			<th>Enter Loan Data:</th>
+			<td></td>
+			<th>Loan Balance, Cumulative Equity and Interest Payments</th>
+		</tr>
+		<tr>
+			<td>Amount of the Loan ($):</td>
+			<td>
+				<input type="number" id="amount" onchange="calculate();" />
+			</td>
+			<td rowspan=8>
+				<canvas id="graph" width="400" height="250"></canvas>
+			</td>
+		</tr>
+	</table>
 </body>
 </html>
