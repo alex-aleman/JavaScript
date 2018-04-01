@@ -47,3 +47,12 @@ function save(amount, apr, years, zipcode) {
 		localStorage.loan_zipcode = zipcode;
 	}
 }
+
+window.onload = function() {
+	if (localStorage && localStorage.loan_amount) {
+		document.getElementById("amount").value = localStorage.loan_amount;
+		document.getElementById("apr").value = localStorage.loan_apr;
+		document.getElementById("years").value = localStorage.loan_years;
+		document.getElementById("zipcode").value = localStorage.loan_zipcode;
+	}
+};
