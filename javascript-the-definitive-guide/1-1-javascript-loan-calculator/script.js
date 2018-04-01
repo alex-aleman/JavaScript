@@ -12,4 +12,12 @@ function calculate() {
 	const principal = parseFloat(amount.value);
 	const interest = parseFloat(apr.value) / 100 / 12;
 	const payments = parseFloat(years.value) * 12;
+
+	const x = Math.pow(1 + interest, payments);
+	const monthly = (principal * x * interest) / (x - 1);
+
+	if (isFinite(monthly)) {
+		payment.innerHTML = monthly.toFixed(2);
+		total.innerHTML
+	}
 }
