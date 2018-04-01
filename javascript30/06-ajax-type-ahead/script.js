@@ -2,6 +2,9 @@ const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb
 
 const cities = [];
 
+const search = document.querySelector('.search');
+const suggestions = document.querySelector('.suggestions');
+
 fetch(endpoint)
 	.then(blob => blob.json())
 	.then(data => cities.push(...data));
@@ -32,9 +35,6 @@ function displayMatches() {
 	}).join('');
 	suggestions.innerHTML = html;
 }
-
-const search = document.querySelector('.search');
-const suggestions = document.querySelector('.suggestions');
 
 search.addEventListener('change', displayMatches);
 search.addEventListener('keyup', displayMatches);

@@ -53,8 +53,8 @@ console.table(oldest);
 // Sort the people alphabetically by last name
 
 const alpha = people.sort((a, b) => {
-	const [aLast, aFirst] = a.split(', ');
-	const [bLast, bFirst] = b.split(', ');
+	const aLast = a.split(',')[0];
+	const bLast = b.split(',')[0];
 	return aLast > bLast ? 1 : -1;
 });
 console.log(alpha);
