@@ -21,20 +21,29 @@ function calculate() {
 		total.innerHTML = (monthly * payments).toFixed(2);
 		totalinterest.innerHTML = ((monthly * payments) - principal).toFixed(2);
 
-		save(amount.value, apr.value, years.value, zipcode.value);
+		save(amount.value, apr.value, years.value, zipcode.value); //Función save() definida más adelante
 
 		try {
 			getLenders(amount.value, apr.value, years.value, zipcode.value);
 		}
 		catch(e) {
-		}
+		}//¿Qué hacen try & catch?
 
-		chart(principal, interest, monthly, payments);
+		chart(principal, interest, monthly, payments);//Función chart() definida más adelante
 	}
 	else {
 		payment.innerHTML = "";
 		total.innerHTML = "";
 		totalinterest.innerHTML = "";
 		chart();
+	}
+}
+
+function save(amount, apr, years, zipcode) {
+	if (window.localStorage) {
+		localStorage.loan_amount = amount;
+		localStorage.loan_apr = apr;
+		localStorage.loan_years = years;
+		localStorage.loan_zipcode = zipcode;
 	}
 }
