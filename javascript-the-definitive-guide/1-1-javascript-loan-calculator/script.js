@@ -54,3 +54,39 @@ window.onload = function () {
 		document.getElementById('zipcode').value = localStorage.loanZipcode;
 	}
 };
+
+function getLenders(amount, apr, years, zipcode) {
+	if (!window.XMLHttpRequest) {
+		return;
+	}
+
+	const ad = document.getElementById('lenders');
+	if (!ad) {
+		return;
+	}
+
+	const url = 'getLenders.php' +
+		'?amt=' + encodeURIComponent(amount) +
+		'&apr=' + encodeURIComponent(apr) +
+		'&yrs=' + encodeURIComponent(years) +
+		'&zip=' + encodeURIComponent(zipcode);
+
+	const req = new XMLHttpRequest();
+	req.open('GET', url);
+	req.send(null);
+
+	// This is asyncrhonous, whatever that means
+	req.onreadystatechange = function () {
+		if (req.readyState === 4 && req.status === 200) {
+			const response = req.responseText;
+			const lenders = JSON.parse(response);
+
+			let list = '';
+			for (let i = 0; i < lenders.length; i++) {
+				list += '<li><a ref=\'' + lenders[i].url + '\'>' + lenders[i].name + '</a>';
+			}
+
+			ad.innerHTML = '<ul>' + list + '</ul>';
+		}
+	};
+}
