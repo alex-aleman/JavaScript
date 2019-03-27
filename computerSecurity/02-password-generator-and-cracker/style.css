@@ -1,0 +1,12 @@
+body {
+	height: 95vh;
+	width: 99vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.hor {
+	display: flex;
+}
